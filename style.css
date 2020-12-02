@@ -6,14 +6,56 @@
   border-top-style:dotted;
   border-bottom-style:solid;
 }
-.sisalto1 h1{}
-
-
-
-
-
-
-
+.sisalto1 h1{
+  font-family:Tahoma;
+  text-decoration:underline;
+  text-transform:uppercase;
+  letter-spacing:0.5em;
+  word-spacing:1em;
+}
+.alue1{
+  width:70%;
+  margin:auto;
+}
+.linkkilista{
+  margin-top: 10px;
+  border:1px black solid;
+  padding:20px;
+  border-radius:20px;
+}
+.linkkilista h2{
+  text-align:center;
+  color: crimson;
+}
+.linkkilista ul{
+  list-style-type:none;
+}
+.yhteydenotto label{
+  display: block;
+}
+.nappula{
+  background-color:black;
+  color:white;
+  padding:10px;
+  border:none;
+}
+.nappula:hover{
+  background-color:chartreuse;
+  color:white;
+}
+.laatikko{
+  float: left;
+  width:33.3%;
+  border:2px solid black;
+  padding:10px;
+  box-sizing: border-box;
+  margin-top:25px;
+}
+.asemointi{
+  position: fixed;
+  top:100px;
+  left:0px;
+}
 ul{
   list-style:none;
 }

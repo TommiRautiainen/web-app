@@ -1,9 +1,9 @@
-const ul = document.querlySelector(".kurssi");
+const ul = document.querySelector(".kurssi");
 const nimiSisalto = document.querySelector("#nimi");
 const kurssinappi = document.querySelector(".kurssinappi");
 const virhe = document.querySelector(".virheilmoitus");
 const asiaSisalto = document.querySelector("#tieto")
-const viesti = document.querySelector("#tiedot")
+const viesti = document.querySelector("#tiedot");
 
 kurssinappi.addEventListener('click', e =>{
   e.preventDefault();
@@ -18,8 +18,7 @@ kurssinappi.addEventListener('click', e =>{
     setTimeout(() => kurssinappi.value = "Lisää tieto", 3000);
   }else{
     const li = document.createElement("li");
-    li.appendChild(document.createTextNode(`${nimiSisalto.value}: $
-    {asiaSisalto.value}`));
+    li.appendChild(document.createTextNode(`${nimiSisalto.value}: ${asiaSisalto.value}`));
     viesti.appendChild(li);
     nimiSisalto.value = " ";
     asiaSisalto.value = " ";
@@ -32,23 +31,18 @@ merkitseValmiit.addEventListener("click", e => {
   e.preventDefault();
 
   if(document.querySelector("#tehta").checked){
-    ul.children[0].innerHTML = '<input type="checkbox" id="tehta" checked>innerHTML tunnit pidetty';
+    ul.children[0].innerHTML = '<input type="checkbox" id="tehta" checked>HTML tunnit pidetty';
   }else{
-    ul.children[0].innerHTML = '<input type="checkbox" id="tehta" checked>HTML';
+    ul.children[0].innerHTML = '<input type="checkbox" id="tehta">HTML';
   }
    if(document.querySelector("#tehtb").checked){
     ul.children[1].innerHTML = '<input type="checkbox" id="tehtb" checked>CSS tunnit pidetty';
   }else{
-    ul.children[1].innerHTML = '<input type="checkbox" id="tehtb" checked>CSS';
+    ul.children[1].innerHTML = '<input type="checkbox" id="tehtb">CSS';
   }
    if(document.querySelector("#tehtc").checked){
     ul.children[2].innerHTML = '<input type="checkbox" id="tehtc" checked>JavaScript tunnit pidetty';
   }else{
-    ul.children[2].innerHTML = '<input type="checkbox" id="tehtc" checked>JavaScript';
-  }
-   if(document.querySelector("#tehtd").checked){
-    ul.children[3].innerHTML = '<input type="checkbox" id="tehtd" checked>CI/CD tunnit pidetty';
-  }else{
-    ul.children[3].innerHTML = '<input type="checkbox" id="tehtd" checked>CI/CD';
+    ul.children[2].innerHTML = '<input type="checkbox" id="tehtc">JavaScript';
   }
 });
