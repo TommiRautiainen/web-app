@@ -1,0 +1,37 @@
+<html> 
+  <head>
+    <title>
+      javascriptiä
+    </title><link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      tieto- ja viestintätekniikka
+    </header>
+    <div class="lomake-alue">
+      <form id="opiskelija lomake">
+        <h1>lisää merkintä</h1>
+        <div class="virheilmoitus"></div>
+        <div>
+          <label>nimi: </label>
+          <input type="text" id="nimi">
+        </div>
+        <div>
+          <label>tieto: </label>
+          <input type="text" id="tieto">
+        </div>
+        <input type="submit" value="lisää tieto" class="kurssinappi">
+      </form>
+      <ul id="tiedot">
+      </ul>
+      <h2>Suoritetavat</h2>
+      <ul class="kurssi">
+        <li class="sisältö"><input type="checkbox" id="tehta">HTML</li>
+        <li class="sisältö"><input type="checkbox" id="tehtb">CSS</li>
+        <li class="sisältö"><input type="checkbox" id="tehtc">JavaScript</li>
+      </ul>
+      <input type="submit" value="merkkaa" class="merkinta">
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

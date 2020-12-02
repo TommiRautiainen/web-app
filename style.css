@@ -1,0 +1,27 @@
+.sisalto{
+  background-color:cyan;
+  padding:10px;
+  border-right-style:double;
+  border-left-style:dashed;
+  border-top-style:dotted;
+  border-bottom-style:solid;
+}
+.sisalto1 h1{}
+
+
+
+
+
+
+
+ul{
+  list-style:none;
+}
+ul li{
+  padding:5px;
+  background-color:crimson;
+  margin:5px 0px;
+}
+header{
+  background-color: crimson;
+}
