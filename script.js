@@ -7,7 +7,7 @@ const viesti = document.querySelector("#tiedot");
 
 kurssinappi.addEventListener('click', e =>{
   e.preventDefault();
-  if(nimiSisalto.value ===  '' || asiaSisalto.value === ''){
+  if(nimiSisalto.value ===  " " || asiaSisalto.value === " "){
     virhe.classList.add("virhe");
     virhe.innerHTML="Täytä kaikki kentät";
     kurssinappi.style.backround = "red";
