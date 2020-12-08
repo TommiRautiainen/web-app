@@ -24,5 +24,8 @@ function sendJSON(){
   var data = JSON.stringify({
     "EmailMsg": "Tähän tulee postin sisältö", //Kirjoittaa sisällön
     "EmailAddress": "randomherra007@gmail.com", //viestin kirjoittajan sähköposti
-  })
+    "EmailTo": "tommioskari04@gmail.com", //oma sähköposti
+    "EmailName": "Teppo Tyyppi" //Nimi kentän sisältö
+  });
+  xhr.send(data);
 }
