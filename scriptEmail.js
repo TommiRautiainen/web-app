@@ -21,10 +21,13 @@ function sendJSON(){
       console.log("valmis, yhteys toimii");
     }
   };
+  const nimi = document.querySelector('#nimi').value;
+  const email = document.querySelector('#email').value;
+  console.log("nimikentän sisältö: " + nimi);
   var data = JSON.stringify({
     "EmailMsg": "Tähän tulee postin sisältö", //Kirjoittaa sisällön
-    "EmailAddress": "randomherra007@gmail.com", //viestin kirjoittajan sähköposti
-    "EmailTo": "tommioskari04@gmail.com", //oma sähköposti
+    "EmailAddress": "", //viestin kirjoittajan sähköposti
+    "EmailTo": "", //oma sähköposti
     "EmailName": "Teppo Tyyppi" //Nimi kentän sisältö
   });
   xhr.send(data);
