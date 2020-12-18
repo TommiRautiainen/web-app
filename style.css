@@ -25,7 +25,7 @@
 }
 .linkkilista h2{
   text-align:center;
-  color: crimson;
+  color: cyan;
 }
 .linkkilista ul{
   list-style-type:none;
@@ -40,7 +40,7 @@
   border:none;
 }
 .nappula:hover{
-  background-color:chartreuse;
+  background-color:cyan;
   color:white;
 }
 .laatikko{
@@ -61,9 +61,13 @@ ul{
 }
 ul li{
   padding:5px;
-  background-color:crimson;
+  background-color:aqua;
   margin:5px 0px;
+  border-style: solid solid solid solid;
 }
 header{
-  background-color: crimson;
+  background-color: cyan;
+}
+body{
+  background-color: gray;
 }

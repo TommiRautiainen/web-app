@@ -9,26 +9,28 @@ emailnappi.addEventListener('click', e => {
 });
 
 function sendJSON(){
-  let xhr = new XMLHttoRequest();
-  let url = "https://salpausrmail.azurewebsites.net/api/HttpTriggerCSharp1?code=1WOELqiU07AqsBviOQYzuNIrQP7xoV7NV7C5W2ctgjIRcf7NXE2biw==";
+  let xhr = new XMLHttpRequest();
+  let url = "https://salpausemail.azurewebsites.net/api/HttpTriggerCSharp2?code=PnWhScmEcspN8Fy7eYKnIZA37AFgUZ0fMQ1OpXOJ6dtBPBGNXAMIqQ==";
 
   xhr.open("POST", url, true);
 
-  xhr.setRequestHeader("Content-Type", "spplication/json");
+  xhr.setRequestHeader("Content-Type", "application/json");
 
   xhr.onreadystatechange = function(){
-    if(xhr.readystate === 4 && xhr.status === 200){
+    if(xhr.readyState === 4 && xhr.status === 200){
       console.log("valmis, yhteys toimii");
     }
   };
   const nimi = document.querySelector('#nimi').value;
+  console.log(nimi);
   const email = document.querySelector('#email').value;
-  console.log("nimikentän sisältö: " + nimi);
+  console.log("nimikentän sisältö: " + email);
+  const viesti = document.querySelector('#Viesti').value;
+  console.log("viestikentän sisältö: " + viesti);
   var data = JSON.stringify({
-    "EmailMsg": "Tähän tulee postin sisältö", //Kirjoittaa sisällön
-    "EmailAddress": "", //viestin kirjoittajan sähköposti
-    "EmailTo": "", //oma sähköposti
-    "EmailName": "Teppo Tyyppi" //Nimi kentän sisältö
+    "EmailMsg": "Viestin lähettäjän sähköposti: " + email + ". Viestin sisältö: " + viesti,  //Kirjoittaa sisällön 
+    "EmailTo": "tommi.rautiainen2", //oma sähköpostisi!!!!
+    "EmailName": nimi//Nimi-kentän sisältö
   });
   xhr.send(data);
 }
